@@ -1,10 +1,45 @@
-<!-- templates/analyze.html -->
-<html>
-<head><title>Word Analysis</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze: {{ word }}</title>
+    <style>
+        body {
+            font-family: monospace;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            background-color: #f0f4ff;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #0066cc;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            color: #0066cc;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
 <body>
-  <h2>You entered: <strong>{{ word }}</strong></h2>
-  <p>Characters: {{ char_count }}</p>
-  <p>Vowels: {{ num_vowels }}</p>
-  <p>Reversed: {{ reversed_word }}</p>
+    <h2>You entered: <strong>{{ word }}</strong></h2>
+    <p>Characters: {{ char_count }}</p>
+    <p>Vowels: {{ num_vowels }}</p>
+    <p>Reversed: {{ reversed_word }}</p>
+
+    <a href="/">← back to home</a>
+
 </body>
 </html>
