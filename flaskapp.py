@@ -36,9 +36,14 @@ def analyze(word):
     # Count the characters in `word` and return as a string
     # Example: /analyze/Drake  →  should display: 5
     char_count = len(word)
-    return render_template('analyze.html', word=word, char_count=char_count)
 
+    num_vowels = 0  # replace this with your vowel-counting logic
+    for char in word.lower():
+        if char in 'aeiou':
+            num_vowels += 1
 
+    reversed_word = word[::-1]  # reverse the word using slicing
+    return render_template('analyze.html', word=word, char_count=char_count, num_vowels=num_vowels, reversed_word=reversed_word)
 
 
 
